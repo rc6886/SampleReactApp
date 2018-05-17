@@ -41,6 +41,7 @@ namespace SampleReactApp.WebApi
             }
 
             app.UseMvc();
+            app.UseStaticFiles();
         }
     }
 }
