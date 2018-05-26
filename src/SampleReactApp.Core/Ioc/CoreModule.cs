@@ -41,12 +41,12 @@ namespace SampleReactApp.Core.Ioc
                 .InstancePerLifetimeScope();
 
             builder
-              .Register<MultiInstanceFactory>(context => 
-              {
-                  var ctx = context.Resolve<IComponentContext>();   // unsure why needed, but it works
-                  return t => (IEnumerable<object>) ctx.Resolve(typeof(IEnumerable<>).MakeGenericType(t));
-              })
-              .InstancePerLifetimeScope();
+                .Register<MultiInstanceFactory>(context => 
+                {
+                    var ctx = context.Resolve<IComponentContext>();   // unsure why needed, but it works
+                    return t => (IEnumerable<object>) ctx.Resolve(typeof(IEnumerable<>).MakeGenericType(t));
+                })
+                .InstancePerLifetimeScope();
         }
     }
 }
