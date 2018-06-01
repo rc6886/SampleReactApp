@@ -2,7 +2,9 @@
 using System.Linq;
 using Nuke.Common;
 using Nuke.Common.Git;
+using Nuke.Common.Tooling;
 using Nuke.Common.Tools.GitVersion;
+using Nuke.Common.Tools.Npm;
 using static Nuke.Common.EnvironmentInfo;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
@@ -28,24 +30,24 @@ class Build : NukeBuild
     // Provides access to the structure of the solution.
 
     Target Clean => _ => _
-            .OnlyWhen(() => false) // Disabled for safety.
-            .Executes(() =>
-            {
-                DeleteDirectories(GlobDirectories(SourceDirectory, "**/bin", "**/obj"));
-                EnsureCleanDirectory(OutputDirectory);
-            });
+        .OnlyWhen(() => false) // Disabled for safety.
+        .Executes(() =>
+        {
+            DeleteDirectories(GlobDirectories(SourceDirectory, "**/bin", "**/obj"));
+            EnsureCleanDirectory(OutputDirectory);
+        });
 
     Target Restore => _ => _
-            .DependsOn(Clean)
-            .Executes(() =>
-            {
-                DotNetRestore(s => DefaultDotNetRestore);
-            });
+        .DependsOn(Clean)
+        .Executes(() =>
+        {
+            DotNetRestore(s => DefaultDotNetRestore);
+        });
 
     Target Compile => _ => _
-            .DependsOn(Restore)
-            .Executes(() =>
-            {
-                DotNetBuild(s => DefaultDotNetBuild);
-            });
+        .DependsOn(Restore)
+        .Executes(() =>
+        {
+            DotNetBuild(s => DefaultDotNetBuild);
+        });
 }

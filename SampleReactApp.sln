@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleReactApp.Build", "build\SampleReactApp.Build.csproj", "{5C8B5794-6A8F-4EEC-A4E3-715D02F3B775}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleReactApp", "build\SampleReactApp.csproj", "{E9DD7F67-F8A1-40EF-B52E-B4204498330B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleReactApp.WebApi", "src\SampleReactApp.WebApi\SampleReactApp.WebApi.csproj", "{7DA22169-2B93-4FE4-9187-94BDBEC6DA9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleReactApp.WebApi", "src\SampleReactApp.WebApi\SampleReactApp.WebApi.csproj", "{7DA22169-2B93-4FE4-9187-94BDBEC6DA9D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleReactApp.Core", "src\SampleReactApp.Core\SampleReactApp.Core.csproj", "{2840DEF9-58EC-4219-A152-BA665483F588}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleReactApp.Core", "src\SampleReactApp.Core\SampleReactApp.Core.csproj", "{2840DEF9-58EC-4219-A152-BA665483F588}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,8 +17,6 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5C8B5794-6A8F-4EEC-A4E3-715D02F3B775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5C8B5794-6A8F-4EEC-A4E3-715D02F3B775}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9DD7F67-F8A1-40EF-B52E-B4204498330B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9DD7F67-F8A1-40EF-B52E-B4204498330B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DA22169-2B93-4FE4-9187-94BDBEC6DA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7DA22169-2B93-4FE4-9187-94BDBEC6DA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DA22169-2B93-4FE4-9187-94BDBEC6DA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
