@@ -11,7 +11,7 @@ task CompileSolution {
 
 task CompileJavascript {
     Set-Location -Path "./src/SampleReactApp.WebApi"
-    & "webpack "
+    & "webpack"
     Set-Location $BuildRoot
 }
 
