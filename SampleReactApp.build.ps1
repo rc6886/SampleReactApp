@@ -1,4 +1,4 @@
-
+$BuildRoot = Resolve-Path .
 
 task Hello {
     'Hello world'
@@ -6,18 +6,21 @@ task Hello {
 
 task CompileSolution {
     & "dotnet" build
+    Set-Location $BuildRoot
 }
 
 task CompileJavascript {
     Set-Location -Path "./src/SampleReactApp.WebApi"
     & "webpack "
+    Set-Location $BuildRoot
 }
 
 task CompileProject CompileJavascript, CompileSolution
 
 task RunSolution {
-    Start-Process "powershell Set-Location -Path './src/SampleReactApp.WebApi'"
+    Set-Location -Path "./src/SampleReactApp.WebApi"
     & "dotnet" run
+    Set-Location $BuildRoot
 }
 
 task WatchJavascript {
