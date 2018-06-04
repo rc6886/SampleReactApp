@@ -262,3 +262,6 @@ __pycache__/
 
 #Nuke Build files
 .tmp/
+
+#Jest Snapshots
+**/*snapshot*/
